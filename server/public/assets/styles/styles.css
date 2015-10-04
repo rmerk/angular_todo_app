@@ -1,0 +1,33 @@
+.container{
+    width: 75%;
+    margin: 0 auto;
+}
+
+.formDiv{
+    width: 25%;
+    margin: 100px 0 0 0;
+    border: solid 2px black;
+    height: 200px;
+    padding: 20px;
+    float:left;
+}
+
+.taskList{
+    width: 60%;
+    margin: 100px 0 0 30px;
+    border: solid 2px black;
+    padding: 20px;
+    float: left;
+}
+
+.title, h4, input{
+    text-align: center;
+}
+
+.submitBtn{
+    margin: 20px 0 0 0;
+}
+
+.crossOff-true{
+    text-decoration: line-through;
+}

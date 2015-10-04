@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic To-Do App with Angular</title>
+    <script src="/vendor/angular/angular.min.js"></script>
+    <script src="/vendor/angular/angular.min.js.map"></script>
+    <script src="/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/assets/scripts/app.min.js"></script>
+    <link rel="stylesheet" href="/assets/styles/styles.css"/>
+</head>
+<body>
+<div class="container" ng-controller="TaskController">
+    <h1 class="title">Basic Angular To-Do App w/ AngularJS</h1>
+    <div class="formDiv" >
+        <form>
+            <h4>Task Form</h4>
+            <input type="text" name="enterTask" placeholder="Please enter a task" ng-model="input"><br />
+            <input type="submit" value="Create Task" class="submitBtn" ng-click="addTask()">
+        </form>
+    </div><!--end form-->
+    <div class="enteredTaskDiv">
+        <ol class="taskList">
+            <li ng-repeat="task in tasklist">
+                <!--Changed ng-model from tasklist.done to task.done-->
+                <input type="checkbox" ng-model="task.done" />
+                <span class="crossOff-{{task.done}}">{{task.task}}</span>
+
+            </li>
+        </ol>
+        <button class="clearButton" ng-click="clearChecked()">Clear Valuel</button>
+    </div><!--end enteredTake-->
+</div><!--end container-->
+</body>
+</html>
