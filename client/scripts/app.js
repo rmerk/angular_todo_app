@@ -3,10 +3,17 @@
  */
 var myApp = angular.module('myApp',[]);
 
-myApp.controller('TaskController', ['$scope', function($scope){
+myApp.controller('TaskController', ['$scope','$http', function($scope, $http){
 
     $scope.tasklist = [];
 
+
+    var getJsonData = function(){
+      $http.get('/jsonData').then(function(res){
+           $scope.tasklist = res.data;
+          console.log(res.data);
+        });
+    };
 
     //This function takes the information from the input textbox and
     //pushes an object onto the end of our tasklist array then it
@@ -29,12 +36,12 @@ myApp.controller('TaskController', ['$scope', function($scope){
 
         for(var i = 0; i < $scope.tasklist.length; i++){
             if($scope.tasklist[i].done === true){
-                $scope.tasklist.splice(i,$scope.tasklist.length);
+                $scope.tasklist.splice(i,1);
             }
         }
     };//end clearChecked()
 
 
-
+    getJsonData();
 
 }]);//end controller function

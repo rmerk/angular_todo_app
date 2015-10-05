@@ -1,14 +1,21 @@
 [
   {
-    "task" : "Make Bed"
+    "task" : "Wake up!",
+    "done" : false
   },
 
   {
-    "task" : "Brush Teeth"
+    "task" : "Prep Award Winning Smile!",
+    "done" : false
   },
 
   {
-    "task" : "Make Lunch"
+    "task" : "Walk the dog.",
+    "done" : false
+  },
+  {
+    "task" : "Sit in traffic...",
+    "done" : false
   }
 
 ]

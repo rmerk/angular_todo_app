@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "node server/app.js"
+    "start": "node server/app.js"
   },
   "author": "Ryan Merchlewitz",
   "license": "ISC",
   "dependencies": {
     "angular": "^1.4.7",
+    "bootstrap": "^3.3.5",
     "express": "^4.13.3",
     "grunt-cli": "^0.1.13",
     "grunt-contrib-copy": "^0.8.1",
