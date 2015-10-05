@@ -1,12 +1,11 @@
 /**
  * Created by m3rkz0r on 10/2/15.
  */
-var myApp = angular.module('myApp',[]);
+var myApp = angular.module('myApp',['ngMaterial']);
 
 myApp.controller('TaskController', ['$scope','$http', function($scope, $http){
 
     $scope.tasklist = [];
-
 
     var getJsonData = function(){
       $http.get('/jsonData').then(function(res){
@@ -37,6 +36,7 @@ myApp.controller('TaskController', ['$scope','$http', function($scope, $http){
         for(var i = 0; i < $scope.tasklist.length; i++){
             if($scope.tasklist[i].done === true){
                 $scope.tasklist.splice(i,1);
+
             }
         }
     };//end clearChecked()

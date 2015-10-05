@@ -8,6 +8,8 @@
     <script src="/vendor/jquery/dist/jquery.min.js"></script>
     <script src="/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/assets/scripts/app.min.js"></script>
+
+    <link rel="stylesheet" href="/assets/styles/angular-material.min.css" />
     <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="/assets/styles/styles.css"/>
     <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
@@ -23,8 +25,8 @@
             <h3 class="text-center">To-Do Controls</h3>
             <input type="text" name="enterTask" placeholder="Please enter a task" ng-model="input"><br />
             <p>
-                <a href="#" class="btn btn-primary" role="button" ng-click="addTask()">Create Task</a>
-                <a href="#" class="btn btn-danger" role="button" ng-click="clearChecked()">Remove Completed!</a>
+                <md-button class="md-raised md-primary" ng-click="addTask()">Create Task</md-button>
+                <md-button class="md-raised md-warn" ng-click="clearChecked()">Remove Completed!</md-button>
             </p>
         </form>
     </div><!--end form-->
@@ -34,12 +36,14 @@
                 <!--Changed ng-model from tasklist.done to task.done-->
                 <div class="postItText">
                     <span class="crossOff-{{task.done}}">{{task.task}}</span>
-                    <input type="checkbox" class="squaredTwo" ng-model="task.done" />
-
+                    <md-checkbox ng-model="task.done" aria-label="Checkbox 1"></md-checkbox>
                 </div>
             </div>
         </div>
     </div><!--end enteredTake-->
 </div><!--end container-->
+<script src="/vendor/angular-aria/angular-aria.js"></script>
+<script src="/vendor/angular-animate/angular-animate.js"></script>
+<script src="/vendor/angular-material/angular-material.js"></script>
 </body>
 </html>
