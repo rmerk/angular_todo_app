@@ -75,6 +75,8 @@ input[type=checkbox]{
 }
 
 .jumbotron{
-    background-color: #663333;
+    background-color: #aa9b4a;
+    background-image: url(../images/ZenBG-1.png), url(../images/ZenBG-2.png);
+    background-repeat: repeat-x, repeat;
     color: white;
 }
