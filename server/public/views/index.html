@@ -6,29 +6,38 @@
     <script src="/vendor/angular/angular.min.js"></script>
     <script src="/vendor/angular/angular.min.js.map"></script>
     <script src="/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/assets/scripts/app.min.js"></script>
+    <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="/assets/styles/styles.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
 </head>
 <body>
 <div class="container" ng-controller="TaskController">
-    <h1 class="title">Basic Angular To-Do App w/ AngularJS</h1>
+    <div class="jumbotron">
+        <h1 class="title">Basic To-Do App w/ AngularJS</h1>
+    </div>
     <div class="formDiv" >
         <form>
-            <h4>Task Form</h4>
+            <h3 class="text-center">To-Do Controls</h3>
             <input type="text" name="enterTask" placeholder="Please enter a task" ng-model="input"><br />
-            <input type="submit" value="Create Task" class="submitBtn" ng-click="addTask()">
+            <p>
+                <a href="#" class="btn btn-primary" role="button" ng-click="addTask()">Create Task</a>
+                <a href="#" class="btn btn-danger" role="button" ng-click="clearChecked()">Remove Completed!</a>
+            </p>
         </form>
     </div><!--end form-->
     <div class="enteredTaskDiv">
-        <ol class="taskList">
-            <li ng-repeat="task in tasklist">
+        <div class="postItDiv">
+            <div class="postIts" ng-repeat="task in tasklist">
                 <!--Changed ng-model from tasklist.done to task.done-->
-                <input type="checkbox" ng-model="task.done" />
-                <span class="crossOff-{{task.done}}">{{task.task}}</span>
+                <div class="postItText">
+                    <span class="crossOff-{{task.done}}">{{task.task}}</span>
+                    <input type="checkbox" class="squaredTwo" ng-model="task.done" />
 
-            </li>
-        </ol>
-        <button class="clearButton" ng-click="clearChecked()">Clear Valuel</button>
+                </div>
+            </div>
+        </div>
     </div><!--end enteredTake-->
 </div><!--end container-->
 </body>
