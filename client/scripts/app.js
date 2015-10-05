@@ -34,9 +34,8 @@ myApp.controller('TaskController', ['$scope','$http', function($scope, $http){
     $scope.clearChecked = function(){
 
         for(var i = 0; i < $scope.tasklist.length; i++){
-            if($scope.tasklist[i].done === true){
+            if($scope.tasklist[i].done == true){
                 $scope.tasklist.splice(i,1);
-
             }
         }
     };//end clearChecked()

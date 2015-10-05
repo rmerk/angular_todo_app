@@ -26,10 +26,13 @@ module.exports = function(grunt) {
                     "angular/angular.min.js.map",
                     "jquery/dist/jquery.min.js",
                     "bootstrap/dist/css/bootstrap.min.css",
-                    "bootstrap/dist/js/bootstrap.min.js"
+                    "bootstrap/dist/js/bootstrap.min.js",
+                    "angular-aria/angular-aria.js",
+                    "angular-animate/angular-animate.js",
+                    "angular-material/angular-material.js"
 
 
-                ],
+                    ],
                 "dest": "server/public/vendor/"
             }
         }
