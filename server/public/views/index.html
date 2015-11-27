@@ -21,11 +21,11 @@
         <h1 class="title">Basic To-Do App w/ AngularJS</h1>
     </div>
     <div class="formDiv" >
-        <form>
+        <form method="POST">
             <h3 class="text-center">To-Do Controls</h3>
             <input type="text" name="enterTask" placeholder="Please enter a task" ng-model="input"><br />
             <p>
-                <md-button class="md-raised md-primary" ng-click="addTask()">Create Task</md-button>
+                <md-button class="md-raised md-primary" ng-click="addTask()" type="submit">Create Task</md-button>
                 <md-button class="md-raised md-warn" ng-click="clearChecked()">Remove Completed!</md-button>
             </p>
         </form>
